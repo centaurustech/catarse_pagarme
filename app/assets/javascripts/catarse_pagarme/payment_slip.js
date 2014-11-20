@@ -27,6 +27,12 @@ App.views.PagarmeForm.addChild('PaymentSlip', {
     var parent = this.parent;
 
     e.preventDefault();
+
+    if($('input#user_bank_account_attributes_account').is(':visible') && that.$('input#user_bank_account_attributes_account').val().length === 0){
+      alert('Por favor preencha os seus dados bancários para o reembolso');
+      return false;
+    }
+
     $(e.currentTarget).hide();
     that.PagarmeForm.loader.show();
 

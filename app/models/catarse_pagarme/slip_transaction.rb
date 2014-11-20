@@ -23,6 +23,7 @@ module CatarsePagarme
     protected
 
     def update_user_bank_account
+      return if self.attributes[:user][:bank_account_attributes][:account].blank?
       self.user.update_attributes(self.attributes.delete(:user))
 
       if self.user.errors.present?
