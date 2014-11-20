@@ -6,6 +6,7 @@ App.views.PagarmeForm.addChild('PaymentChoice', {
   },
 
   onListPaymentChange: function(e){
+    window.optimizely.push(["activate", 2224811212]);
     var that = this.parent;
 
     $('.payment_section').fadeOut('fast', function(){
