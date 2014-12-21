@@ -1,7 +1,6 @@
 = javascript_include_tag 'catarse_pagarme'
 #catarse_pagarme_form
   = form_tag 'javascript:void(0);', :class => 'pagarme' do
-
     .next_step_after_valid_document
 
       .list_payment
@@ -78,7 +77,7 @@
             = check_box_tag :payment_save_card, 1, false
             = label_tag :payment_save_card, t('projects.contributions.edit.payment_save_card')
           .loader.hide= image_tag('loading.gif')
-            .clearfix
+          .clearfix
           = submit_tag t('projects.contributions.review.form.labels.submit'), :class => 'btn btn-primary btn-large', :id => "credit_card_submit"
 
       #payment_type_slip_section.hide.payment_section
